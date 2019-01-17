@@ -7,9 +7,9 @@ RUN zypper --non-interactive --no-gpg-checks ref
 RUN zypper --non-interactive --no-gpg-checks update
 
 # Install 
-RUN zypper --non-interactive --no-gpg-checks in python-simplejson xauth htop vim curl ntp ntpdate ssl-cert\
+RUN zypper --non-interactive --no-gpg-checks in python-simplejson xauth htop vim curl ntp\
     apache2 \
-    php5-sqlite unzip\
+    unzip\
     &&  zypper clean \
     && rm -rf /var/cache/zypp/*
 
